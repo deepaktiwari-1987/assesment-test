@@ -1,4 +1,4 @@
-import { ProductCategory as ProductCategoryType } from '../types/product-category';
+import { ProductCategory as ProductCategoryType } from "../types/product-category";
 
 export class ProductCategory {
   productCategoryList: ProductCategoryType[] = [];
@@ -12,16 +12,22 @@ export class ProductCategory {
   // get product category by id
 
   getProductCategoryByCategoryID(categoryID: number) {
-    /*return this.productCategoryList.find(
+    const productCategoryData = this.productCategoryList.find(
       category => category.category_id === categoryID
-    );*/
+    );
 
-    let productCategoryDetail: any = null;
+    if (productCategoryData === undefined) {
+      throw new TypeError("No Data available");
+    } else {
+      return productCategoryData;
+    }
+
+    /*let productCategoryDetail: any = null;
     this.productCategoryList.forEach(productCategory => {
       if (productCategory.category_id === categoryID) {
         productCategoryDetail = productCategory;
       }
     });
-    return productCategoryDetail;
+    return productCategoryDetail;*/
   }
 }

@@ -1,4 +1,4 @@
-import { Product as ProductType } from '../types/product';
+import { Product as ProductType } from "../types/product";
 
 export class Product {
   productList: ProductType[] = [];
@@ -12,13 +12,20 @@ export class Product {
   // get product by id
 
   getProductByID(productID: number) {
-    /*return this.productList.find(product => product.product_id === productID);*/
-    let productDetail: any = null;
+    const productData = this.productList.find(
+      product => product.product_id === productID
+    );
+    if (productData === undefined) {
+      throw new TypeError("No Data available");
+    } else {
+      return productData;
+    }
+    /*let productDetail: any = null;
     this.productList.forEach(product => {
       if (product.product_id === productID) {
         productDetail = product;
       }
     });
-    return productDetail;
+    return productDetail;*/
   }
 }

@@ -1,4 +1,4 @@
-import { UserType as UserTypeT } from '../types/user-type';
+import { UserType as UserTypeT } from "../types/user-type";
 
 export class UserType {
   userTypeList: UserTypeT[] = [];
@@ -12,15 +12,20 @@ export class UserType {
   // get product by id
 
   getUserTypeByID(userTypeID: number) {
-    /*return this.userTypeList.find(
+    const userTypeData = this.userTypeList.find(
       product => product.user_type_id === userTypeID
-    );*/
-    let userTypeDetail: any = null;
+    );
+    if (userTypeData === undefined) {
+      throw new TypeError("No Data available");
+    } else {
+      return userTypeData;
+    }
+    /*let userTypeDetail: any = null;
     this.userTypeList.forEach(userType => {
       if (userType.user_type_id === userTypeID) {
         userTypeDetail = userType;
       }
     });
-    return userTypeDetail;
+    return userTypeDetail;*/
   }
 }
