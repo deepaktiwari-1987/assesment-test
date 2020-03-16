@@ -22,6 +22,9 @@ total amount = 950
 total discount = 45 + (950-45)*30/100 = 315.3
 total charge amount = 634.7;
 
+# Class Diagram
+Class diagram is also uploaded in class diagram folder on root
+
 
 # Commands to run application (All commands need to run on project root folder only)
 
