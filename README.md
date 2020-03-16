@@ -28,15 +28,15 @@ Class diagram is also uploaded in class diagram folder on root
 
 # Commands to run application (All commands need to run on project root folder only)
 
-# To compile code
-tsc index.ts
-# To run code
-node index.js
+# Run the code
+npm start
+
 # To run unit test
 npm run test
 
 It will also generate the code coverage on same console window.. Currently I have only tried to cover a single file and there was no mocking required anywhere so I have not mocked the code.
 
 # Eslinting
+npm run eslint
 
 Eslinting is also setup but eslint errors are not resolved in this application.. need to resolve that also. but setup is done for eslinting we can do setup some rules as per project requirement also in .eslintrc.js file
